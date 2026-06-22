@@ -1,0 +1,107 @@
+financial_year: "2025-26"
+asset_class: "us_listed_equity"
+effective_from: "2025-04-01"
+effective_to: "2026-03-31"
+
+fields:
+  asset_classification:
+    value: "foreign/unlisted"
+    effective_from: "2024-07-23"
+    effective_to: null
+    source: "IT Act §2(14) read with §2(47A) — securities listed on a foreign stock exchange are not 'listed' under Indian law because listing on a 'recognised stock exchange' (IT Act §2(35A)) means a stock exchange notified under SCRA 1956, which covers only Indian exchanges. Finance (No. 2) Act 2024 s.7 amending §112(1)(c)(iii) treats such assets as unlisted for capital-gains rate purposes."
+
+  long_term_threshold_months:
+    value: 24
+    effective_from: "2024-07-23"
+    effective_to: null
+    source: "Finance (No. 2) Act 2024 s.3, amending IT Act §2(42A) — holding period for unlisted securities (including foreign equity) reduced from 36 months to 24 months effective 23 Jul 2024. An asset held for more than 24 months before the date of transfer qualifies as a long-term capital asset."
+
+  ltcg:
+    section:
+      value: "112"
+      effective_from: "2024-07-23"
+      effective_to: null
+      source: "IT Act §112(1)(c)(iii) — applicable to unlisted securities transferred on or after 23 Jul 2024 at the rate specified therein. IT Act §112A (concessional 10%/12.5% rate with ₹1,25,000 exemption) applies only to equity shares or units of equity-oriented funds listed on a recognised Indian stock exchange on which STT is paid; foreign equity is expressly outside §112A."
+
+    rate_pct:
+      value: 12.5
+      effective_from: "2024-07-23"
+      effective_to: null
+      source: "Finance (No. 2) Act 2024 s.7, substituting IT Act §112(1)(c)(iii) — LTCG on unlisted securities at 12.5% (without the benefit of indexation) for transfers on or after 23 Jul 2024. Prior to this amendment the rate under §112(1)(c)(iii) was 20% with indexation under §48(second proviso) or 10% without indexation (at assessee's option)."
+
+    indexation:
+      value: false
+      effective_from: "2024-07-23"
+      effective_to: null
+      source: "Finance (No. 2) Act 2024 s.7 — the amended §112(1)(c)(iii) specifies 12.5% 'without giving effect to the second proviso to §48', thereby removing the cost-inflation-index (CII) benefit for unlisted securities transferred on or after 23 Jul 2024. Transitional relief (choice of 20% with indexation or 12.5% without) applies to 'land or building or both' acquired before 23 Jul 2024 only (proviso inserted by Finance Act 2024 to §112(1)) — this relief does NOT extend to shares or securities."
+
+    exemption_inr:
+      value: 0
+      effective_from: "2024-07-23"
+      effective_to: null
+      source: "IT Act §112 — no basic exemption or threshold deduction is available against LTCG under §112. The annual exemption of ₹1,25,000 (inserted by Finance (No. 2) Act 2024 into §112A(1)) applies exclusively to LTCG taxable under §112A (Indian listed equity/equity-oriented funds). There is no equivalent exemption under §112 for foreign or unlisted securities."
+
+  stcg:
+    taxed_at:
+      value: "slab"
+      effective_from: "2001-04-01"
+      effective_to: null
+      source: "IT Act — STCG on foreign equity (unlisted under Indian law) is not subject to any special flat rate. It is included in the assessee's total income and taxed at the applicable slab rates under Part I of the First Schedule to the relevant Finance Act. This position is unchanged by the Finance (No. 2) Act 2024."
+
+    section_111a_applies:
+      value: false
+      effective_from: "2004-10-01"
+      effective_to: null
+      source: "IT Act §111A — the concessional 20% STCG rate (post Finance (No. 2) Act 2024) applies only to: (a) equity shares in a company listed on a recognised stock exchange in India, or (b) units of an equity-oriented fund or units of a business trust, where the transaction is chargeable to securities transaction tax (STT). Transfers of foreign (US-listed) equity attract neither STT nor Indian stock-exchange listing, so §111A is not applicable. STCG is taxed at slab rates."
+
+  setoff:
+    stcl_offsets:
+      value: ["stcg", "ltcg"]
+      effective_from: "2001-04-01"
+      effective_to: null
+      source: "IT Act §70(2) — where the net result for any assessment year in respect of any source under the head 'Capital gains' is a loss, the assessee shall be entitled to have the amount of such loss set off against income from any other source under the same head. Short-term capital loss may be set off against both short-term capital gains and long-term capital gains arising in the same year."
+
+    ltcl_offsets:
+      value: ["ltcg"]
+      effective_from: "2001-04-01"
+      effective_to: null
+      source: "IT Act §70(3) — where the net result for any assessment year in respect of any source falling under the head 'Capital gains, being long-term capital gains' is a loss, such loss shall not be set off except against income, if any, under the head 'Capital gains, being long-term capital gains'. Long-term capital loss cannot be used to offset short-term capital gains."
+
+    carry_forward_years:
+      value: 8
+      effective_from: "2001-04-01"
+      effective_to: null
+      source: "IT Act §74(1) — unabsorbed capital loss (both short-term and long-term) not set off in the current year shall be carried forward to the following assessment year and shall be available for set off for a maximum of 8 assessment years. Requires timely filing of return of income as per §139(1); late filers lose the right to carry forward under §80."
+
+  surcharge_slabs:
+    value:
+      - income_above_inr: 0
+        income_upto_inr: 5000000
+        rate_pct: 0
+      - income_above_inr: 5000000
+        income_upto_inr: 10000000
+        rate_pct: 10
+      - income_above_inr: 10000000
+        income_upto_inr: 20000000
+        rate_pct: 15
+      - income_above_inr: 20000000
+        income_upto_inr: 50000000
+        rate_pct: 25
+      - income_above_inr: 50000000
+        income_upto_inr: null
+        rate_pct: 37
+    effective_from: "2023-04-01"
+    effective_to: null
+    source: "Finance Act 2023 and Finance Act 2025 — surcharge slabs for resident individuals under the old tax regime: nil for income ≤ ₹50L; 10% for ₹50L–₹1Cr; 15% for ₹1Cr–₹2Cr; 25% for ₹2Cr–₹5Cr; 37% above ₹5Cr. CRITICAL: for LTCG taxable under §112 (foreign/unlisted equity), the surcharge is NOT capped at 15% — the full slab applies including 37% for high-income taxpayers. Contrast with §112A (Indian listed equity) where surcharge on LTCG is capped at 15% per Finance Act 2023. Under the new tax regime (Finance Act 2023), maximum surcharge is 25% on all income. This tool computes LTCG/STCG only; surcharge depends on total income including non-capital-gains income — escalate to CA for final surcharge determination."
+
+  cess_pct:
+    value: 4
+    effective_from: "2018-04-01"
+    effective_to: null
+    source: "Finance Act 2018 — Health and Education Cess at 4% is levied on the amount of income tax plus applicable surcharge. It replaced the earlier 3% education cess (2% Education Cess + 1% Secondary and Higher Education Cess) and has remained unchanged since FY 2018-19."
+
+  wash_sale_rule:
+    value: false
+    effective_from: "2001-04-01"
+    effective_to: null
+    source: "IT Act — India has no statutory wash-sale rule equivalent to US IRC §1091. A capital loss crystallised by an arm's-length sale is prima facie allowable even if the same security is immediately repurchased. However: (1) CBDT Circular 6/2016 warns that sham/circular transactions may be disregarded; (2) General Anti-Avoidance Rule (GAAR) under IT Act §95–§102 (applicable from AY 2018-19, triggered when the dominant purpose of an arrangement is to obtain a tax benefit) could deny the loss on a round-trip where the economic position is unchanged. FLAG for CA review: any repurchase of the same US equity within 30 calendar days of a loss-realising sale should be disclosed and the CA should assess GAAR/CBDT-circular exposure before claiming the loss."

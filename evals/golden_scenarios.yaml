@@ -1,0 +1,200 @@
+# Hand-computed golden scenarios for ltcg_agent/engine/gains.py
+# All monetary values in paise unless the field name says _inr or _cents.
+
+- id: ltcg_basic
+  type: single_trade
+  description: "LTCG — bought 2023, sold 2025, 837 days, middle income, 0% surcharge"
+  ruleset_date: "2025-09-15"
+  lot:
+    ticker: AAPL
+    quantity: 10
+    acquisition_date: "2023-06-01"
+    cost_per_share_cents: 10000
+    acquisition_ttbr_paise: 8300
+  sale:
+    ticker: AAPL
+    quantity: 10
+    sale_date: "2025-09-15"
+    price_cents: 15000
+    commission_cents: 0
+  disposal_fx:
+    ttbr_paise_per_usd: 8600
+    rate_date: "2025-09-15"
+    source: "seed_csv"
+  tax:
+    taxable_income_inr: 2000000
+    stcg_marginal_rate_pct: "30"
+    regime: "old"
+  expected:
+    holding_days: 837
+    term: long
+    gain_inr_paise: 4600000
+    stcg_paise: 0
+    ltcg_paise: 4600000
+    stcl_paise: 0
+    ltcl_paise: 0
+    net_stcg_paise: 0
+    net_ltcg_paise: 4600000
+    carry_forward_stcl_paise: 0
+    carry_forward_ltcl_paise: 0
+    ltcg_tax_paise: 575000
+    stcg_tax_paise: 0
+    surcharge_paise: 0
+    cess_paise: 23000
+    total_tax_paise: 598000
+
+- id: stcg_loss_carryforward
+  type: single_trade
+  description: "STCG loss — 212 days, loss carried forward, zero tax"
+  ruleset_date: "2025-08-01"
+  lot:
+    ticker: NVDA
+    quantity: 5
+    acquisition_date: "2025-01-01"
+    cost_per_share_cents: 20000
+    acquisition_ttbr_paise: 8600
+  sale:
+    ticker: NVDA
+    quantity: 5
+    sale_date: "2025-08-01"
+    price_cents: 18000
+    commission_cents: 0
+  disposal_fx:
+    ttbr_paise_per_usd: 8700
+    rate_date: "2025-08-01"
+    source: "seed_csv"
+  tax:
+    taxable_income_inr: 1500000
+    stcg_marginal_rate_pct: "30"
+    regime: "old"
+  expected:
+    holding_days: 212
+    term: short
+    gain_inr_paise: -770000
+    stcg_paise: 0
+    ltcg_paise: 0
+    stcl_paise: 770000
+    ltcl_paise: 0
+    net_stcg_paise: 0
+    net_ltcg_paise: 0
+    carry_forward_stcl_paise: 770000
+    carry_forward_ltcl_paise: 0
+    ltcg_tax_paise: 0
+    stcg_tax_paise: 0
+    surcharge_paise: 0
+    cess_paise: 0
+    total_tax_paise: 0
+
+- id: stcg_high_earner
+  type: single_trade
+  description: "STCG — 184 days, high earner Rs 80L income, 30% slab, 10% surcharge"
+  ruleset_date: "2025-11-01"
+  lot:
+    ticker: MSFT
+    quantity: 100
+    acquisition_date: "2025-05-01"
+    cost_per_share_cents: 5000
+    acquisition_ttbr_paise: 8400
+  sale:
+    ticker: MSFT
+    quantity: 100
+    sale_date: "2025-11-01"
+    price_cents: 7000
+    commission_cents: 0
+  disposal_fx:
+    ttbr_paise_per_usd: 8500
+    rate_date: "2025-11-01"
+    source: "seed_csv"
+  tax:
+    taxable_income_inr: 8000000
+    stcg_marginal_rate_pct: "30"
+    regime: "old"
+  expected:
+    holding_days: 184
+    term: short
+    gain_inr_paise: 17500000
+    stcg_paise: 17500000
+    ltcg_paise: 0
+    stcl_paise: 0
+    ltcl_paise: 0
+    net_stcg_paise: 17500000
+    net_ltcg_paise: 0
+    carry_forward_stcl_paise: 0
+    carry_forward_ltcl_paise: 0
+    ltcg_tax_paise: 0
+    stcg_tax_paise: 5250000
+    surcharge_paise: 525000
+    cess_paise: 231000
+    total_tax_paise: 6006000
+
+- id: stcl_offsets_ltcg
+  type: setoff_only
+  description: "s70(2): STCL 1.2L offsets LTCG 3L, net LTCG 1.8L, 0% surcharge"
+  ruleset_date: "2025-09-15"
+  aggregates:
+    stcg_paise: 0
+    ltcg_paise: 3000000
+    stcl_paise: 1200000
+    ltcl_paise: 0
+  tax:
+    taxable_income_inr: 3000000
+    stcg_marginal_rate_pct: "30"
+    regime: "old"
+  expected:
+    net_stcg_paise: 0
+    net_ltcg_paise: 1800000
+    carry_forward_stcl_paise: 0
+    carry_forward_ltcl_paise: 0
+    ltcg_tax_paise: 225000
+    stcg_tax_paise: 0
+    surcharge_paise: 0
+    cess_paise: 9000
+    total_tax_paise: 234000
+
+- id: ltcg_37pct_surcharge
+  type: setoff_only
+  description: "s112 LTCG, income Rs 5.5Cr, 37% surcharge NOT capped unlike s112A"
+  ruleset_date: "2025-09-15"
+  aggregates:
+    stcg_paise: 0
+    ltcg_paise: 10000000
+    stcl_paise: 0
+    ltcl_paise: 0
+  tax:
+    taxable_income_inr: 55000000
+    stcg_marginal_rate_pct: "30"
+    regime: "old"
+  expected:
+    net_stcg_paise: 0
+    net_ltcg_paise: 10000000
+    carry_forward_stcl_paise: 0
+    carry_forward_ltcl_paise: 0
+    ltcg_tax_paise: 1250000
+    stcg_tax_paise: 0
+    surcharge_paise: 462500
+    cess_paise: 68500
+    total_tax_paise: 1781000
+
+- id: ltcl_cannot_offset_stcg
+  type: setoff_only
+  description: "s70(3): LTCL 0.5L cannot offset STCG 2L, carry-forward enforced"
+  ruleset_date: "2025-09-15"
+  aggregates:
+    stcg_paise: 2000000
+    ltcg_paise: 0
+    stcl_paise: 0
+    ltcl_paise: 500000
+  tax:
+    taxable_income_inr: 3000000
+    stcg_marginal_rate_pct: "30"
+    regime: "old"
+  expected:
+    net_stcg_paise: 2000000
+    net_ltcg_paise: 0
+    carry_forward_stcl_paise: 0
+    carry_forward_ltcl_paise: 500000
+    ltcg_tax_paise: 0
+    stcg_tax_paise: 600000
+    surcharge_paise: 0
+    cess_paise: 24000
+    total_tax_paise: 624000

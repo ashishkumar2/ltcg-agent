@@ -1,0 +1,139 @@
+INCOME TAX ACT, 1961 — SELECTED PROVISIONS FOR CAPITAL GAINS ON FOREIGN EQUITY
+==============================================================================
+
+SECTION 112A — TAX ON LONG-TERM CAPITAL GAINS ON SALE OF EQUITY SHARES
+
+(1) Where the total income of an assessee includes any income chargeable under the
+head "Capital gains" arising from the transfer of a long-term capital asset being
+an equity share in a company or a unit of an equity oriented fund or a unit of a
+business trust, the tax payable by the assessee on the total income shall be the
+aggregate of—
+
+(i) the amount of income-tax calculated on such long-term capital gains exceeding
+one lakh rupees at the rate of ten per cent (raised to 12.5% from Finance Act 2024
+with effect from 23rd July 2024); and
+
+(ii) the amount of income-tax payable on the balance amount of the total income as
+if such balance were the total income of the assessee.
+
+(2) The provisions of sub-section (1) shall apply only if the transfer of the equity
+share is chargeable to securities transaction tax.
+
+NOTE: For foreign listed equities held by Indian tax residents, STT does not apply.
+Instead, section 112A is applicable only to LTCG from equity shares listed in India.
+For foreign equity (e.g. US stocks), general LTCG provisions apply.
+
+HOLDING PERIOD FOR FOREIGN EQUITY:
+Under the Finance (No. 2) Act 2024, unlisted securities (including foreign equity)
+held for more than 24 months qualify as long-term capital assets.
+Prior to the 2024 amendment, the threshold was 36 months for unlisted securities.
+
+The Finance Act 2024 (effective 23 July 2024) reduced the holding period for foreign
+equity from 36 months to 24 months.
+
+SECTION 112 — TAX ON LONG-TERM CAPITAL GAINS (GENERAL)
+
+(1) Where the total income of an assessee includes any income chargeable under the
+head "Capital gains", arising from the transfer of a long-term capital asset (not
+covered by section 112A), the tax payable by the assessee shall be—
+
+(a) in the case of an individual or Hindu undivided family, twenty per cent of the
+amount of such capital gains.
+
+With effect from Finance Act 2024: LTCG on listed securities at 12.5% without
+indexation benefit. LTCG on unlisted securities at 12.5% without indexation.
+
+SECTION 111A — TAX ON SHORT-TERM CAPITAL GAINS
+
+Where the total income of an assessee includes income chargeable under the head
+"Capital gains" arising from transfer of a short-term capital asset being an equity
+share in a company or a unit of an equity oriented fund—
+
+(a) the income-tax payable shall be calculated at the rate of fifteen per cent
+(raised to 20% from Finance Act 2024 with effect from 23rd July 2024).
+
+For foreign equity (US stocks), short-term capital gains are taxed as per slab rate
+or 20% as applicable under the Finance Act 2024.
+
+GRANDFATHERING PROVISION (SECTION 112A PROVISO):
+
+For long-term capital assets acquired before 1st February 2018, the cost of
+acquisition shall be deemed to be the higher of—
+(a) the actual cost of acquisition of such asset, and
+(b) the lower of—
+    (i) the fair market value of such asset as on 31st January 2018, and
+    (ii) the full value of consideration received or accruing as a result of
+         the transfer of such asset.
+
+Fair Market Value on 31 January 2018:
+- For listed equity: highest price quoted on a recognised stock exchange on 31 Jan 2018
+- For unlisted equity (including foreign equity): book value method per Rule 11UA
+
+NOTE: Grandfathering under section 112A strictly applies to assets chargeable to
+STT (securities transaction tax). For foreign equity held by Indian residents, the
+grandfathering benefit as codified in section 112A does not apply directly; however,
+practitioners rely on the indexed cost of acquisition under section 48 for assets
+acquired before the relevant indexation base year.
+
+CBDT CIRCULAR ON EXCHANGE RATE FOR CAPITAL GAINS (FOREIGN ASSETS):
+
+Per CBDT Circular No. 7/2023 and prior circulars, for computing capital gains on
+transfer of a capital asset located outside India denominated in foreign currency:
+
+- Cost of acquisition: convert to INR using the SBI TT Buying Rate (TTBR) prevailing
+  on the date of acquisition.
+- Sale consideration: convert to INR using the SBI TT Buying Rate (TTBR) prevailing
+  on the date of transfer.
+
+If the SBI TTBR is not available for the exact date (e.g. a bank holiday), use the
+rate of the immediately preceding working day.
+
+SCHEDULE FA — FOREIGN ASSETS DISCLOSURE:
+
+Indian tax residents are required to disclose foreign assets under Schedule FA of
+ITR-2 or ITR-3. This includes:
+
+A. Details of Foreign Bank Accounts
+B. Details of Financial Interest in any Entity outside India
+C. Details of Immovable Property outside India
+D. Details of any other Capital Asset held outside India
+E. Details of accounts in which you have signing authority
+
+For US equity holdings, each brokerage account and each holding must be separately
+reported under Schedule FA Part B and Part D.
+
+EXEMPTION LIMIT FOR LTCG (SECTION 112A):
+
+With effect from Finance Act 2024 (Budget 2024-25):
+- Exemption: Rs. 1.25 lakh per financial year (increased from Rs. 1 lakh)
+- Rate above exemption: 12.5% (increased from 10%)
+- Effective for transfers made on or after 23rd July 2024
+
+CARRY FORWARD OF LOSSES:
+
+Under section 74 of the Income Tax Act:
+- Short-term capital losses can be set off against both short-term and long-term
+  capital gains.
+- Long-term capital losses can only be set off against long-term capital gains.
+- Unabsorbed capital losses can be carried forward for 8 assessment years.
+
+TAX LOSS HARVESTING:
+
+Tax loss harvesting involves crystallising unrealised losses to offset capital gains.
+Key considerations for Indian residents holding US equity:
+1. Wash sale rules do not apply under Indian tax law (unlike US law).
+2. Losses must be realised (disposed of) before the end of the financial year
+   (31 March) to be usable in that assessment year.
+3. Short-term losses are more flexible — they can offset both STCG and LTCG.
+4. After harvesting, the investor can immediately repurchase the same securities
+   without any wash sale restriction under Indian law.
+
+FOREIGN TAX CREDIT (SECTION 90/91):
+
+If US taxes (e.g. dividend withholding tax) are paid on foreign income, Indian
+residents can claim foreign tax credit under section 90 (where DTAA exists) or
+section 91 (unilateral relief). The India-US DTAA provides relief on double taxation.
+
+Capital gains arising to an Indian resident from sale of US securities are generally
+taxable only in India (the resident state) under Article 13 of the India-US DTAA,
+unless the securities derive value principally from immovable property.

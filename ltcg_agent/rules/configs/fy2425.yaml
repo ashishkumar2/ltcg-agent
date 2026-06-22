@@ -1,0 +1,40 @@
+financial_year: "2024-25"
+effective_from: "2024-04-01"
+effective_to: "2025-03-31"
+
+fields:
+  ltcg_rate_bps:
+    value: 1250
+    effective_from: "2024-07-23"
+    effective_to: null
+    source: "Finance (No. 2) Act 2024 s.5, amending IT Act §112A — LTCG rate raised from 1000 bps to 1250 bps effective 23 July 2024"
+
+  stcg_rate_bps:
+    value: 2000
+    effective_from: "2024-07-23"
+    effective_to: null
+    source: "Finance (No. 2) Act 2024 s.6, amending IT Act §111A — STCG rate raised from 1500 bps to 2000 bps effective 23 July 2024"
+
+  ltcg_exemption_paise:
+    value: 12500000
+    effective_from: "2024-07-23"
+    effective_to: null
+    source: "Finance (No. 2) Act 2024, proviso to IT Act §112A(1) — exemption increased from ₹1,00,000 (10000000 paise) to ₹1,25,000 (12500000 paise)"
+
+  ltcg_holding_months:
+    value: 24
+    effective_from: "2024-07-23"
+    effective_to: null
+    source: "Finance (No. 2) Act 2024 — holding period for unlisted securities (incl. foreign equity) reduced from 36 months to 24 months"
+
+  grandfathering_enabled:
+    value: true
+    effective_from: "2018-02-01"
+    effective_to: null
+    source: "Finance Act 2018, proviso to IT Act §112A — grandfathering cost = max(actual cost, FMV as on 31 Jan 2018)"
+
+  min_harvest_loss_paise:
+    value: 500000
+    effective_from: "2024-04-01"
+    effective_to: null
+    source: "internal policy — minimum unrealised loss (₹5,000) to surface as a harvest candidate"
