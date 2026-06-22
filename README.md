@@ -284,6 +284,14 @@ To update the corpus after a new Budget, add entries to `seed_corpus.jsonl` with
 
 ---
 
+## Contributors
+
+**Ashish Basani** — [basaniashish@gmail.com](mailto:basaniashish@gmail.com) · [GitHub @ashishkumar2](https://github.com/ashishkumar2)
+
+Design, architecture, domain modelling, statutory research, and all engineering decisions. See [CONTRIBUTORS.md](CONTRIBUTORS.md) for full details.
+
+---
+
 ## Important disclaimer
 
 This software is provided for educational and informational purposes only. It does not constitute tax, legal, or financial advice. All computed figures are estimates based on the statutory rules as understood at the time of writing and must be independently verified by a qualified Chartered Accountant before use in any tax filing. The authors make no warranty, express or implied, as to the accuracy or completeness of the output.
